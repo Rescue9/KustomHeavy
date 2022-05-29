@@ -20,8 +20,6 @@
   <nav>
     <ul>
       <li><a href="#">SimplyText</a></li>
-      <li><a href="#">Placeholder</a></li>
-      <li><a href="#">Placeholder</a></li>
     </ul>
   </nav>
 
