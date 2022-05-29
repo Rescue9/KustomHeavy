@@ -40,6 +40,14 @@ body {
     -ms-flex: 3;
     flex: 3;
     padding: 10px;
+  }
+
+  /* Style the content */
+  image {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding: 10px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
   }
@@ -49,6 +57,8 @@ body {
     background-color: #777;
     padding: 10px;
     text-align: center;
+    text-decoration-line: underline;
+    text-shadow: 2px 2px #000;
     color: white;
     border-radius: 2px;
   }
