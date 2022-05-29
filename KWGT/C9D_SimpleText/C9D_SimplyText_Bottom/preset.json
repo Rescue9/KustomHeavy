@@ -1,0 +1,140 @@
+{
+  "preset_info": {
+    "version": 11,
+    "title": "c9d_bottom",
+    "description": "",
+    "author": "Rescue9",
+    "width": 1440,
+    "height": 296,
+    "features": "",
+    "release": 357121814,
+    "locked": false,
+    "pflags": 0
+  },
+  "preset_root": {
+    "internal_events": [
+      {
+        "action": "KUSTOM_ACTION"
+      }
+    ],
+    "internal_type": "RootLayerModule",
+    "background_color": "#69000000",
+    "viewgroup_items": [
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Shapes",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Vertical",
+            "position_padding_left": 240.0,
+            "shape_type": "RECT",
+            "shape_width": 1.0,
+            "shape_height": 200.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Vertical",
+            "position_padding_right": 240.0,
+            "shape_type": "RECT",
+            "shape_width": 1.0,
+            "shape_height": 200.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Horizontal Top",
+            "position_padding_bottom": 145.0,
+            "shape_type": "RECT",
+            "shape_width": 720.0,
+            "shape_height": 1.0
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Phone",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Phone Touch Area",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.google.android.dialer/.extensions.GoogleDialtactsActivity;S.org.kustom.intent.label=Phone;end"
+              }
+            ],
+            "position_padding_right": 485.0,
+            "shape_type": "RECT",
+            "shape_width": 240.0,
+            "shape_height": 190.0,
+            "paint_color": "#00FFFFFF"
+          },
+          {
+            "internal_type": "BitmapModule",
+            "position_padding_right": 475.0,
+            "bitmap_width": 175.0,
+            "bitmap_bitmap": "kfile://org.kustom.provider/bitmaps/IMGde2845feff37db795de2b37d4f73dd51",
+            "bitmap_alpha": 60.0
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Email",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Email Touch Area",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.ninefolders.hd3/.activity.NineActivity;S.org.kustom.intent.label=Nine;end"
+              }
+            ],
+            "shape_type": "RECT",
+            "shape_width": 230.0,
+            "shape_height": 185.0,
+            "paint_color": "#00FFFFFF"
+          },
+          {
+            "internal_type": "BitmapModule",
+            "bitmap_width": 175.0,
+            "bitmap_bitmap": "kfile://org.kustom.provider/bitmaps/IMG39e01892919d7587a1e62c4e4762eaed",
+            "bitmap_alpha": 60.0
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Messaging",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Messaging Touch Area",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.google.android.apps.messaging/.ui.ConversationListActivity;S.org.kustom.intent.label=Messages;end"
+              }
+            ],
+            "position_padding_left": 480.0,
+            "shape_type": "RECT",
+            "shape_width": 235.0,
+            "shape_height": 190.0,
+            "paint_color": "#00FFFFFF"
+          },
+          {
+            "internal_type": "BitmapModule",
+            "position_padding_left": 500.0,
+            "bitmap_width": 200.0,
+            "bitmap_bitmap": "kfile://org.kustom.provider/bitmaps/IMGfe535828e781eb8b0b54464c5dc15dba",
+            "bitmap_alpha": 60.0
+          }
+        ]
+      }
+    ]
+  }
+}

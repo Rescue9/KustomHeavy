@@ -1,0 +1,153 @@
+{
+  "preset_info": {
+    "version": 11,
+    "title": "c9d_nav-cam-app",
+    "description": "",
+    "author": "Rescue9",
+    "width": 432,
+    "height": 897,
+    "features": "",
+    "release": 357121814,
+    "locked": false,
+    "pflags": 0
+  },
+  "preset_root": {
+    "internal_events": [
+      {
+        "action": "KUSTOM_ACTION"
+      }
+    ],
+    "internal_type": "RootLayerModule",
+    "background_color": "#69000000",
+    "config_scale_value": 99.77324,
+    "viewgroup_items": [
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Shapes",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "shape_type": "RECT",
+            "shape_width": 220.0,
+            "shape_height": 1.0,
+            "position_anchor": "TOP"
+          },
+          {
+            "internal_type": "ShapeModule",
+            "shape_type": "RECT",
+            "shape_width": 220.0,
+            "shape_height": 1.0,
+            "position_padding_bottom": 145.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "position_padding_top": 145.0,
+            "shape_type": "RECT",
+            "shape_width": 220.0,
+            "shape_height": 1.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Vertical",
+            "shape_type": "RECT",
+            "shape_width": 1.0,
+            "shape_height": 450.0,
+            "position_anchor": "CENTERRIGHT",
+            "position_padding_right": 3.0
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Navigation",
+        "position_anchor": "TOP",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Navigation",
+            "text_expression": "Navigation",
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_size": 40.0,
+            "position_anchor": "TOP",
+            "position_padding_top": 50.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Navigation Touch Area",
+            "shape_type": "RECT",
+            "shape_width": 210.0,
+            "shape_height": 145.0,
+            "paint_color": "#00FFFFFF",
+            "position_anchor": "TOP",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.google.android.apps.maps/com.google.android.maps.MapsActivity;S.org.kustom.intent.label=Maps;end"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Camera",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Camera",
+            "text_expression": "Camera",
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_size": 40.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Camera Touch Area",
+            "shape_type": "RECT",
+            "shape_width": 210.0,
+            "shape_height": 145.0,
+            "paint_color": "#00FFFFFF",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.google.android.GoogleCamera/com.android.camera.CameraLauncher;S.org.kustom.intent.label=Camera;end"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Applications",
+        "position_anchor": "BOTTOM",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Applications",
+            "text_expression": "Applications",
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_size": 40.0,
+            "position_anchor": "BOTTOM",
+            "position_padding_bottom": 50.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Applications Touch Area",
+            "shape_type": "RECT",
+            "shape_width": 210.0,
+            "shape_height": 145.0,
+            "paint_color": "#00FFFFFF",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_SHORTCUT",
+                "intent": "intent:#Intent;action=com.teslacoilsw.launcher.ACTION;launchFlags=0x10000000;component=com.teslacoilsw.launcher/.NovaShortcutHandler;S.LAUNCHER_ACTION=APP_DRAWER;S.org.kustom.intent.label=Nova%20action;end"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

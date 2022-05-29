@@ -1,0 +1,214 @@
+{
+  "preset_info": {
+    "version": 11,
+    "title": "c9d_clock",
+    "description": "",
+    "author": "Rescue9",
+    "width": 1008,
+    "height": 897,
+    "features": "WEATHER",
+    "release": 357121814,
+    "locked": false,
+    "pflags": 0
+  },
+  "preset_root": {
+    "internal_type": "RootLayerModule",
+    "config_scale_value": 124.56539,
+    "background_color": "#69000000",
+    "viewgroup_items": [
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Shapes",
+        "position_anchor": "TOP",
+        "viewgroup_items": [
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Horizontal Top",
+            "shape_type": "RECT",
+            "shape_width": 410.0,
+            "shape_height": 1.0,
+            "position_anchor": "TOP"
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Time",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "text_size": 120.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf"
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Alarm",
+        "position_anchor": "TOPLEFT",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Alarm",
+            "text_expression": "$df(\"EEE hh:mma\", si(alarmd))$",
+            "text_size": 25.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_align": "CENTER",
+            "position_anchor": "TOPLEFT",
+            "position_padding_left": 5.0,
+            "position_padding_top": 5.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Alarm Touch Area",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_APP",
+                "intent": "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;component=com.google.android.deskclock/com.android.deskclock.DeskClock;S.org.kustom.intent.label=Clock;end"
+              }
+            ],
+            "shape_type": "RECT",
+            "shape_width": 130.0,
+            "shape_height": 50.0,
+            "paint_color": "#00FFFFFF",
+            "position_anchor": "TOPLEFT"
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Temperature",
+        "position_anchor": "BOTTOMRIGHT",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Temperature",
+            "text_expression": "$wi(temp)$°$wi(tempu)$",
+            "text_size": 30.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "KUSTOM_ACTION",
+                "kustom_action": "WEATHER_UPDATE"
+              }
+            ],
+            "text_align": "CENTER",
+            "position_anchor": "BOTTOMRIGHT",
+            "position_padding_right": 5.0,
+            "position_padding_bottom": 5.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Temperature Touch Area",
+            "shape_type": "RECT",
+            "shape_width": 80.0,
+            "shape_height": 50.0,
+            "paint_color": "#00FFFFFF",
+            "position_anchor": "BOTTOMRIGHT",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "KUSTOM_ACTION",
+                "kustom_action": "WEATHER_UPDATE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Weather",
+        "position_anchor": "BOTTOMLEFT",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Condition",
+            "text_expression": "$tc(cap, wi(cond))$",
+            "text_size": 30.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "internal_toggles": {
+              "text_align": 0
+            },
+            "position_anchor": "BOTTOMLEFT",
+            "text_align": "CENTER",
+            "position_padding_left": 5.0,
+            "position_padding_bottom": 5.0
+          },
+          {
+            "internal_type": "ShapeModule",
+            "internal_title": "Condition Touch Area",
+            "internal_events": [
+              {
+                "type": "SINGLE_TAP",
+                "action": "LAUNCH_ACTIVITY",
+                "intent": "intent:#Intent;component=com.weather.Weather/.app.bounce.MapActivity;S.org.kustom.intent.label=The%20Weather%20Channel;end"
+              }
+            ],
+            "shape_type": "RECT",
+            "shape_width": 200.0,
+            "shape_height": 50.0,
+            "paint_color": "#00FFFFFF",
+            "position_anchor": "BOTTOMLEFT"
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "Zulu",
+        "config_tz": "Zulu",
+        "position_anchor": "TOPRIGHT",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Time",
+            "text_expression": "Z: $df(hh:mma)$",
+            "text_size": 30.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "position_anchor": "TOPRIGHT",
+            "position_padding_right": 5.0,
+            "position_padding_top": 5.0
+          }
+        ]
+      },
+      {
+        "internal_type": "OverlapLayerModule",
+        "internal_title": "MV",
+        "config_tz": "US/Central",
+        "config_visible": "REMOVE",
+        "position_anchor": "TOPRIGHT",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "internal_title": "Time",
+            "text_expression": "MV: $df(hh:mma)$",
+            "text_size": 30.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_align": "CENTER",
+            "position_anchor": "TOPRIGHT",
+            "position_padding_right": 5.0,
+            "position_padding_top": 5.0
+          }
+        ]
+      },
+      {
+        "internal_title": "Countdown",
+        "internal_type": "OverlapLayerModule",
+        "position_anchor": "TOPRIGHT",
+        "config_visible": "REMOVE",
+        "viewgroup_items": [
+          {
+            "internal_type": "TextModule",
+            "text_size": 25.0,
+            "text_family": "kfile://org.kustom.provider/fonts/Roboto-Thin.ttf",
+            "text_expression": "$tf(2021y3M19d,D)$ Days",
+            "text_align": "CENTER",
+            "position_padding_right": 5.0,
+            "position_padding_top": 35.0
+          }
+        ]
+      }
+    ]
+  }
+}
